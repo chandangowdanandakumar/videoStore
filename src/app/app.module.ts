@@ -9,6 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SignupComponent } from './home/signup/signup.component';
 import { LoginComponent } from './home/login/login.component';
 import { HomeRoutingModule } from './home/home-routing.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeRoutingModule } from './home/home-routing.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
