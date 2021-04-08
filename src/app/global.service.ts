@@ -1,12 +1,15 @@
 import { Injectable } from "@angular/core";
 import construct = Reflect.construct;
 import { HttpClient } from "@angular/common/http";
-
 @Injectable({
   providedIn: "root",
-})
-export class GlobalService {
+})export class GlobalService {
+  routes = {
+    moviename: "moviename"
+  }
+
   constructor(protected httpClient: HttpClient) {}
+  
   protected toFormData(formObj: any, formData: FormData) {
     Object.keys(formObj).forEach((n) => {
       const obj = formObj[n];
