@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -10,6 +10,8 @@ import { SignupComponent } from './home/signup/signup.component';
 import { LoginComponent } from './home/login/login.component';
 import { HomeRoutingModule } from './home/home-routing.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { DemoMaterialModule } from './material.module';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HomeRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    DemoMaterialModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

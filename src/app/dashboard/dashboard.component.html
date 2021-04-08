@@ -1,1 +1,13 @@
-{{ response | json}}
+<ul>
+  <div *ngFor="let myGenres of genres">
+    <li>
+      <h1>{{ myGenres }}</h1>
+
+      <div *ngFor="let myMovie of response">
+        <li *ngIf="myMovie.moviegenres.includes(myGenres)">
+          {{ myMovie.movie }}
+        </li>
+      </div>
+    </li>
+  </div>
+</ul>
